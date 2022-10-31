@@ -1,0 +1,14 @@
+<div class="container nick">
+    <div class="content nick-content">
+        <h1>WPISZ SWÓJ<br>NICK</h1>
+        <div class="input-wrapper">
+            <input class="input" (input)="onInputChange($event)" value={{value}}>
+        </div>
+        <div class="simple-keyboard"></div>
+        <!-- <a class="nick-link" href="#" (click)="goTo($event)">Dalej</a> -->
+        <div class="button-wrapper button-wide">
+            <a class="button play-again-button" href="#" (click)="goTo($event)">Dalej</a>
+            <span class="button-shadow"></span>
+        </div>
+    </div>
+</div>

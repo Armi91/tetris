@@ -1,0 +1,43 @@
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    padding: 166px 75px 202px;
+}
+
+.game-view {
+    display: flex;
+}
+
+.game-board-wrapper{
+    position: relative;
+    width: 1498px;
+    height: 2740px;
+    background-image: url('../../assets/images/game-board-wrapper.png');
+    .game-board {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 1392px;
+        height: 2574px;
+        background-color: rgba(0, 0, 255, 0.5);
+    }
+}
+
+.pause-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.button-wrapper {
+    width: 730px;
+}
+
+.game-info-wrapper {
+    p{
+        font-weight: 200;
+    }
+}

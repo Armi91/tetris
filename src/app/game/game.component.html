@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="wrapper">
+        <div class="game-view">
+            <div class="game-board-wrapper">
+                <div id="game-board" class="game-board"></div>
+            </div>
+            <div class="game-info-wrapper">
+                <p class="next-text">NASTĘPNE</p>
+                <div class="next-wrapper">
+                    <!-- <div class="next-inner">{{ nextShape | async }}</div> -->
+                    <div class="next-inner"><img src="../../assets/blockrain/blocks/{{nextShape | async}}.png" alt=""></div>
+                </div>
+                <p class="mt-big">POZIOM:</p>
+                <p><strong>{{ level | async }}</strong></p>
+                <p class="mt-big">WYNIK:</p>
+                <p><strong>{{ score | async }}</strong></p>
+                <p class="mt-big">CZAS:</p>
+                <p><strong>{{ time | date:'mm:ss' }}</strong></p>
+            </div>
+        </div>
+        <div class="game-controls">
+            <div class="control-item" (click)="clickLeft($event)" id="touchLeft">
+                <div class="button">
+                    <img src="../../assets/images/control-arrow.png" alt="">
+                </div>
+                <span class="button-shadow"></span>
+            </div>
+            <div class="control-item left-shadow" (click)="clickRight($event)" id="touchRight">
+                <div class="button">
+                    <img src="../../assets/images/control-arrow.png" alt="" class="rotated-icon">
+                </div>
+                <span class="button-shadow"></span>
+            </div>
+            <div class="control-item" (click)="clickRotate($event)" id="touchRotate">
+                <div class="button">
+                    <img src="../../assets/images/control-rotate.png" alt="">
+                </div>
+                <span class="button-shadow"></span>
+            </div>
+            <div class="control-item" (click)="clickDown($event)" id="touchDrop">
+                <div class="button">
+                    <img src="../../assets/images/control-down.png" alt="">
+                </div>
+                <span class="button-shadow"></span>
+            </div>
+        </div>
+        <div class="pause-wrapper">
+            <div class="button-wrapper">
+                <a href="#" class="button" (click)="togglePause($event)">PAUZA</a>
+                <span class="button-shadow"></span>
+            </div>
+        </div>
+    </div>
+</div>

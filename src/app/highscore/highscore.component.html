@@ -1,0 +1,19 @@
+<div class="container highscore">
+    <div class="content">
+        <h1>RANKING</h1>
+        <div class="results">
+            <div class="result-item" *ngFor="let item of results | async; let i = index;">
+                <p class="result-nick">{{ i + 1 }}. {{ item.nick }}</p>
+                <span class="filler"></span>
+                <p>{{ item.score }}</p>
+            </div>
+        </div>
+        <div class="button-wrapper button-wide">
+            <a class="button play-again-button" [routerLink]="[ '/game' ]">
+                <span>ZAGRAJ<br>PONOWNIE</span>
+                <img src="../../assets/images/play-again-button-icon.png" alt="">
+            </a>
+            <span class="button-shadow"></span>
+        </div>
+    </div>
+</div>
